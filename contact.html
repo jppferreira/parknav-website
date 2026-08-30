@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — ParkNav</title>
+  <meta name="description" content="Contact ParkNav support at support@parknav.app. Privacy, billing, and product questions welcome.">
+  <link rel="canonical" href="https://parknav.app/contact">
+  <link rel="icon" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Syne:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+
+  <header class="nav is-solid" data-nav>
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">
+        <img src="images/logo.png" width="36" height="36" alt="">
+        <span>ParkNav</span>
+      </a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Open menu">
+        <span></span>
+      </button>
+      <nav class="nav-menu" data-nav-menu>
+        <a class="nav-link" href="features.html">Features</a>
+        <a class="nav-link" href="pricing.html">Pricing</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link is-active" href="contact.html">Contact</a>
+        <a class="btn btn-small" href="index.html#download">Get the app</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <header class="page-intro">
+      <div class="page-intro-inner">
+        <p class="kicker">Contact</p>
+        <h1 class="display">Tell us what’s going on.</h1>
+        <p class="lede">Support, privacy, and billing all come through here. We read everything that lands in the inbox.</p>
+      </div>
+    </header>
+
+    <section class="section-tight">
+      <div class="wrap-wide contact-grid">
+        <div>
+          <form class="form" name="contact" data-contact-form data-webflow-form>
+            <div class="form-fields">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+              </div>
+              <div class="field">
+                <label for="topic">Topic</label>
+                <select id="topic" name="topic">
+                  <option value="Support">Support</option>
+                  <option value="Privacy">Privacy</option>
+                  <option value="Billing">Billing</option>
+                  <option value="Press">Press</option>
+                  <option value="Something else">Something else</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+              <button class="btn" type="submit">Send message</button>
+              <p class="form-note">Or email <a href="mailto:support@parknav.app">support@parknav.app</a> directly.</p>
+            </div>
+            <div class="form-success" data-form-success>
+              <h2 class="display">Got it.</h2>
+              <p class="lede">Thanks — if you need a copy in your own mail app, you can also write to support@parknav.app.</p>
+            </div>
+          </form>
+          <div class="contact-meta">
+            <p>ParkNav</p>
+            <p class="muted">Find parking. Save time.</p>
+            <a href="mailto:support@parknav.app">support@parknav.app</a>
+          </div>
+        </div>
+        <div class="contact-visual">
+          <img src="images/scene-contact.jpg" alt="Clay street corner with a sage car parked by a neighbourhood shop">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap-wide footer-grid">
+      <div>
+        <p class="brand-word">ParkNav</p>
+        <p>Find parking. Save time.</p>
+      </div>
+      <div>
+        <h2>Product</h2>
+        <ul>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="index.html#download">Get the app</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Company</h2>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mailto:support@parknav.app">support@parknav.app</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Legal</h2>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li><a href="data.html">Data &amp; open sources</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>© 2026 ParkNav</span>
+      <span>Map data © OpenStreetMap contributors, ODbL</span>
+    </div>
+  </footer>
+
+  <script src="js/site.js"></script>
+</body>
+</html>

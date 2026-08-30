@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Install ParkNav — Wi-Fi download</title>
+  <meta name="description" content="Download the ParkNav Android APK over your local Wi-Fi, or see how to install on iPhone.">
+  <link rel="icon" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Syne:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+
+  <header class="nav is-solid" data-nav>
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">
+        <img src="images/logo.png" width="36" height="36" alt="">
+        <span>ParkNav</span>
+      </a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Open menu">
+        <span></span>
+      </button>
+      <nav class="nav-menu" data-nav-menu>
+        <a class="nav-link" href="features.html">Features</a>
+        <a class="nav-link" href="pricing.html">Pricing</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="btn btn-small" href="install.html">Install</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <header class="page-intro">
+      <div class="page-intro-inner">
+        <p class="kicker">Install</p>
+        <h1 class="display">Get ParkNav on this Wi-Fi.</h1>
+        <p class="lede">Android can install the APK from this page. iPhone cannot sideload an unsigned app over Wi-Fi — the route for that is below.</p>
+      </div>
+    </header>
+
+    <section class="section-tight">
+      <div class="wrap-wide contact-grid">
+        <div>
+          <p class="kicker">Android</p>
+          <h2 class="display">Download the APK</h2>
+          <p class="lede">Same Wi-Fi as this computer. Open this page on your phone, tap download, then allow install from the browser.</p>
+          <div class="cta-row">
+            <a class="btn" id="apk-link" href="downloads/parknav.apk" download="ParkNav.apk">Download ParkNav.apk</a>
+          </div>
+          <p class="form-note" id="apk-url" style="margin-top: 1rem;"></p>
+          <div class="steps" style="margin-top: 2rem; gap: 1.4rem;">
+            <div>
+              <p class="step-num">01</p>
+              <h3>Tap download</h3>
+              <p class="muted">Chrome or Samsung Internet will save the file. If Android warns that the file is from an unknown source, that’s expected for a direct APK.</p>
+            </div>
+            <div>
+              <p class="step-num">02</p>
+              <h3>Allow this browser to install</h3>
+              <p class="muted">Settings → allow from this source, then Open. ParkNav is signed for testing, not Play Store.</p>
+            </div>
+            <div>
+              <p class="step-num">03</p>
+              <h3>Open ParkNav</h3>
+              <p class="muted">The app is standalone — you don’t need Expo Go on Android.</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="kicker">Scan</p>
+          <h2 class="display" style="font-size: 1.8rem; margin-bottom: 1rem;">Phone on the same network</h2>
+          <img id="qr" alt="QR code for this install page" width="220" height="220" style="background: var(--elevated); border-radius: 18px; padding: 12px;">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ios">
+        <h2 class="display">Wi-Fi install isn’t available the same way</h2>
+        <p class="lede" style="margin-top: 1rem;">Apple only lets you install apps that are signed with an Apple Developer certificate (TestFlight, App Store, or a USB install from Xcode). An IPA dropped on this Wi-Fi page would not open on a normal iPhone.</p>
+        <div class="faq" style="margin-top: 2rem;">
+          <div>
+            <h3>What we can do on iOS</h3>
+            <p>Install Xcode from the Mac App Store, plug the iPhone in, trust the computer, then run a device build. That installs a real ParkNav app for about 7 days with a free Apple ID, or longer with a paid Developer account.</p>
+          </div>
+          <div>
+            <h3>Test over Wi-Fi today</h3>
+            <p>Install Expo Go from the App Store, then scan the QR code from <code>npx expo start</code> on this Mac. That’s the JS app, not a standalone ParkNav icon.</p>
+          </div>
+          <div>
+            <h3>Later: TestFlight</h3>
+            <p>With the Apple Developer Program (£99/year), EAS can build an IPA and you install through TestFlight over Wi-Fi — that’s the proper iOS equivalent of this APK link.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap-wide footer-grid">
+      <div>
+        <p class="brand-word">ParkNav</p>
+        <p>Find parking. Save time.</p>
+      </div>
+      <div>
+        <h2>Product</h2>
+        <ul>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="install.html">Install</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Company</h2>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mailto:support@parknav.app">support@parknav.app</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Legal</h2>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li><a href="data.html">Data &amp; open sources</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>© 2026 ParkNav</span>
+      <span>Map data © OpenStreetMap contributors, ODbL</span>
+    </div>
+  </footer>
+
+  <script src="js/site.js"></script>
+  <script>
+    (function () {
+      var page = window.location.href.split("#")[0];
+      var apk = new URL("downloads/parknav.apk", page).href;
+      var qr = document.getElementById("qr");
+      var note = document.getElementById("apk-url");
+      if (qr) {
+        qr.src = "https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=" + encodeURIComponent(page);
+      }
+      if (note) note.textContent = apk;
+    })();
+  </script>
+</body>
+</html>

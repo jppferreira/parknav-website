@@ -1,0 +1,6 @@
+.DS_Store
+Thumbs.db
+*.apk
+*.ipa
+downloads/*.apk
+downloads/*.ipa

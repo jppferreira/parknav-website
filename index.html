@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ParkNav — Find parking. Save time.</title>
+  <meta name="description" content="ParkNav finds free, legal street parking near your destination. Search now or later, check signs, and get a reminder before you overstay.">
+  <link rel="canonical" href="https://parknav.app/">
+  <link rel="icon" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Syne:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+
+  <!-- Webflow: Navbar symbol -->
+  <header class="nav" data-nav>
+    <div class="nav-inner">
+      <a class="nav-brand" href="index.html">
+        <img src="images/logo.png" width="36" height="36" alt="">
+        <span>ParkNav</span>
+      </a>
+      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Open menu">
+        <span></span>
+      </button>
+      <nav class="nav-menu" data-nav-menu>
+        <a class="nav-link" href="features.html">Features</a>
+        <a class="nav-link" href="pricing.html">Pricing</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="btn btn-small" href="#download">Get the app</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="hero">
+      <img class="hero-media" src="images/hero-street.jpg" alt="Clay city street with a sage-green car looking for a place to park">
+      <div class="hero-fade"></div>
+      <div class="hero-copy">
+        <p class="brand-word">ParkNav</p>
+        <h1>Find parking. Save time.</h1>
+        <p class="lede">Free legal street parking near where you’re going — before you leave the house.</p>
+        <div class="cta-row">
+          <a class="btn" href="#download">Get the app</a>
+          <a class="btn btn-ghost" href="#how">See how it works</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">How it works</p>
+          <h2 class="display">Three quiet steps. Then you’re parked.</h2>
+        </div>
+
+        <div class="steps">
+          <div>
+            <p class="step-num">01</p>
+            <h3>Tell us where you’re going</h3>
+            <p class="muted">Use your current location, or type a street, station, or airport. Search for today, or pick a date later this week.</p>
+          </div>
+
+          <div>
+            <p class="step-num">02</p>
+            <h3>We look along nearby streets</h3>
+            <p class="muted">ParkNav reads OpenStreetMap parking data — free bays first, then paid, airport, and long-stay options if you need them.</p>
+            <div class="stage">
+              <img src="images/scene-overhead.jpg" alt="Overhead clay London street with a sage car searching for a free bay">
+            </div>
+          </div>
+
+          <div>
+            <p class="step-num">03</p>
+            <h3>Drive to the best option</h3>
+            <p class="muted">Open the map, walk the last minutes, and keep Plan B ready if the street is full.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap-wide split">
+        <div class="split-visual">
+          <img src="images/scene-bay.jpg" alt="Clay street with a car settling into a parking bay">
+        </div>
+        <div class="split-copy">
+          <p class="kicker">Free first</p>
+          <h2 class="display">We look for free parking before we show you anything else.</h2>
+          <p class="lede">Nearby mode ranks free and free-with-conditions streets first. Paid options stay in reserve so you’re never left circling with no plan.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap-wide">
+        <div class="section-head">
+          <p class="kicker">Trip modes</p>
+          <h2 class="display">The same search, tuned to the trip.</h2>
+        </div>
+        <div class="modes">
+          <div class="mode-visual">
+            <img class="is-show" data-mode-image="nearby" src="images/scene-bay.jpg" alt="Residential street parking">
+            <img data-mode-image="airport" src="images/scene-airport.jpg" alt="Clay airport long-stay car park">
+            <img data-mode-image="longstay" src="images/scene-parked.jpg" alt="Car parked for a longer stay">
+          </div>
+          <div class="mode-list">
+            <button class="mode is-on" type="button" data-mode="nearby">
+              <h3>Nearby</h3>
+              <p>Street parking around you or a destination. Free bays first, with walking time you actually want to do.</p>
+            </button>
+            <button class="mode" type="button" data-mode="airport">
+              <h3>Airport</h3>
+              <p>Longer stays, operator car parks, and options that make sense when you’re catching a flight.</p>
+            </button>
+            <button class="mode" type="button" data-mode="longstay">
+              <h3>Long stay</h3>
+              <p>From a few hours to two weeks. We check whether the mapped stay length covers the time you need.</p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap-wide split split-flip">
+        <div class="split-visual">
+          <img src="images/scene-sign.jpg" alt="Person checking a parking sign beside a sage-green clay car">
+        </div>
+        <div class="split-copy">
+          <p class="kicker">Check the sign</p>
+          <h2 class="display">Photograph the plate. We’ll help you read it.</h2>
+          <p class="lede">Rules change. Map tags miss things. When you arrive, point the camera at the sign so you can see hours, max stay, and conditions in plain English — then always trust the street over the app.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap-wide split">
+        <div class="split-visual">
+          <img src="images/scene-parked.jpg" alt="Sage clay car parked quietly on a residential street">
+        </div>
+        <div class="split-copy">
+          <p class="kicker">While you’re away</p>
+          <h2 class="display">A timer, and a nudge before you need to move.</h2>
+          <p class="lede">Start a session when you leave the car. ParkNav can remind you before the stay ends — so a free bay doesn’t become a ticket.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="kicker">Pricing</p>
+          <h2 class="display">Search is free. Keep extras if you want them.</h2>
+          <p class="lede">Unlimited parking searches on the free plan. A pass unlocks saving, sharing, and the rest of ParkNav.</p>
+        </div>
+        <div class="plans">
+          <article class="plan">
+            <h3>Free</h3>
+            <p class="price">£0</p>
+            <p class="tag">Start here</p>
+            <ul>
+              <li>Unlimited parking searches</li>
+              <li>Current location or typed destinations</li>
+              <li>Free, paid, and restriction info</li>
+              <li>Sign checks and session timer</li>
+            </ul>
+            <a class="btn btn-ghost" href="#download">Get ParkNav</a>
+          </article>
+          <article class="plan">
+            <h3>24 Hours</h3>
+            <p class="price">£1.49</p>
+            <p class="tag">Perfect for today</p>
+            <ul>
+              <li>Full parking search</li>
+              <li>Plan B and Plan C</li>
+              <li>Future destinations</li>
+              <li>Sign and restriction checks</li>
+            </ul>
+            <a class="btn btn-ghost" href="#download">Get 24 Hours</a>
+          </article>
+          <article class="plan plan-featured">
+            <h3>Monthly</h3>
+            <p class="price">£3.49</p>
+            <p class="tag">Best for regular parking</p>
+            <ul>
+              <li>Full ParkNav access</li>
+              <li>Save locations and share spots</li>
+              <li>Search across cities</li>
+              <li>Parking alerts and analysis</li>
+            </ul>
+            <a class="btn" href="#download">Start Monthly</a>
+          </article>
+        </div>
+        <p class="fine">The 24-hour pass is one-time. Monthly renews until you cancel. “Unlimited” searches are subject to fair-use limits. ParkNav is guidance only — always check signs and local rules.</p>
+      </div>
+    </section>
+
+    <section class="close" id="download">
+      <div class="close-frame">
+        <img src="images/scene-side-car.jpg" alt="Sage clay car on a sunlit city street">
+        <div class="close-fade"></div>
+        <div class="close-copy">
+          <h2 class="display">Less circling. More arriving.</h2>
+          <p class="lede">ParkNav is free to download on iPhone and Android.</p>
+          <div class="cta-row">
+            <a class="btn" href="install.html">Install on this Wi-Fi</a>
+            <a class="btn btn-ghost" href="install.html#ios">iPhone options</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <p class="disclaimer">ParkNav provides parking guidance from map data and optional sign reading. It is not a booking service or legal advice. Availability, fees, and rules can change — check roadside signs before you leave the car.</p>
+  </main>
+
+  <!-- Webflow: Footer symbol -->
+  <footer class="footer">
+    <div class="wrap-wide footer-grid">
+      <div>
+        <p class="brand-word">ParkNav</p>
+        <p>Find parking. Save time.</p>
+      </div>
+      <div>
+        <h2>Product</h2>
+        <ul>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="index.html#download">Get the app</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Company</h2>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mailto:support@parknav.app">support@parknav.app</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Legal</h2>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+          <li><a href="data.html">Data &amp; open sources</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>© 2026 ParkNav</span>
+      <span>Map data © OpenStreetMap contributors, ODbL</span>
+    </div>
+  </footer>
+
+  <script src="js/site.js"></script>
+</body>
+</html>
