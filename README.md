@@ -1,6 +1,10 @@
 # ParkNav marketing site
 
-Static marketing website for [ParkNav](https://github.com) — separate from the mobile app repo.
+Static marketing website for **ParkNav** — separate from the mobile app repo.
+
+**Live (GitHub Pages):** https://stssbd-art.github.io/parknav-website/
+
+**Repo:** https://github.com/stssbd-art/parknav-website
 
 ## Pages
 
