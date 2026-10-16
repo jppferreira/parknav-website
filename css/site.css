@@ -749,6 +749,30 @@ p {
   color: var(--muted);
 }
 
+.hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-error {
+  display: none;
+  margin: 0;
+  color: var(--danger);
+  font-size: 0.88rem;
+}
+
+.form-error.is-show {
+  display: block;
+}
+
+.btn:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
 .form-success {
   display: none;
   padding: 1.25rem 0;

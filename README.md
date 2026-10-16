@@ -52,4 +52,4 @@ See `WEBFLOW.md` for recreating this design in Webflow for visual editing.
 
 ## App repo
 
-The React Native / Expo app is **not** in this repository. It lives in a separate project. The app only links to public URLs (`parknav.app/privacy`, etc.) — it does not embed this site.
+The React Native / Expo app is **not** in this repository. It lives in a separate project. The app links to these GitHub Pages URLs. Contact is the form on `contact.html`. Do not print a support address on the site.

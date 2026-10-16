@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact — ParkNav</title>
-  <meta name="description" content="Contact ParkNav support at support@parknav.app. Privacy, billing, and product questions welcome.">
-  <link rel="canonical" href="https://parknav.app/contact">
+  <meta name="description" content="Contact ParkNav about privacy, billing, and the product. Use the form — we do not publish a support address.">
+  <link rel="canonical" href="https://stssbd-art.github.io/parknav-website/contact.html">
   <link rel="icon" href="images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,7 +46,7 @@
     <section class="section-tight">
       <div class="wrap-wide contact-grid">
         <div>
-          <form class="form" name="contact" data-contact-form data-webflow-form>
+          <form class="form" id="contact-form" name="contact" data-contact-form data-webflow-form>
             <div class="form-fields">
               <div class="field">
                 <label for="name">Name</label>
@@ -70,18 +70,22 @@
                 <label for="message">Message</label>
                 <textarea id="message" name="message" required></textarea>
               </div>
+              <div class="field hp" aria-hidden="true">
+                <label for="company">Company</label>
+                <input id="company" name="_honey" type="text" tabindex="-1" autocomplete="off">
+              </div>
               <button class="btn" type="submit">Send message</button>
-              <p class="form-note">Or email <a href="mailto:support@parknav.app">support@parknav.app</a> directly.</p>
+              <p class="form-note">Fill in your details and send. We’ll reply to the email you enter.</p>
+              <p class="form-error" data-form-error role="alert"></p>
             </div>
             <div class="form-success" data-form-success>
               <h2 class="display">Got it.</h2>
-              <p class="lede">Thanks — if you need a copy in your own mail app, you can also write to support@parknav.app.</p>
+              <p class="lede">Thanks. Your message has been sent. We’ll reply to the email you entered.</p>
             </div>
           </form>
           <div class="contact-meta">
             <p>ParkNav</p>
             <p class="muted">Find parking. Save time.</p>
-            <a href="mailto:support@parknav.app">support@parknav.app</a>
           </div>
         </div>
         <div class="contact-visual">
@@ -110,7 +114,6 @@
         <ul>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="mailto:support@parknav.app">support@parknav.app</a></li>
         </ul>
       </div>
       <div>

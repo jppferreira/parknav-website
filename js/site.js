@@ -26,21 +26,72 @@
 
   const form = document.querySelector("[data-contact-form]");
   if (form) {
-    form.addEventListener("submit", (event) => {
+    const topicField = form.querySelector("[name=topic]");
+    const requestedTopic = new URLSearchParams(window.location.search).get("topic");
+    if (topicField && requestedTopic) {
+      const match = [...topicField.options].some((option) => option.value === requestedTopic);
+      if (match) topicField.value = requestedTopic;
+    }
+
+    form.addEventListener("submit", async (event) => {
       event.preventDefault();
       const data = new FormData(form);
       const name = String(data.get("name") || "").trim();
       const email = String(data.get("email") || "").trim();
       const message = String(data.get("message") || "").trim();
+      const topic = String(data.get("topic") || "Question").trim();
+      const honey = String(data.get("_honey") || "").trim();
       if (!name || !email || !message) return;
 
-      form.classList.add("is-sent");
-      const success = form.querySelector("[data-form-success]");
-      if (success) success.classList.add("is-show");
+      if (honey) {
+        form.classList.add("is-sent");
+        form.querySelector("[data-form-success]")?.classList.add("is-show");
+        return;
+      }
 
-      const subject = encodeURIComponent(`ParkNav: ${data.get("topic") || "Question"}`);
-      const body = encodeURIComponent(`${message}\n\n— ${name}\n${email}`);
-      form.dataset.mailto = `mailto:support@parknav.app?subject=${subject}&body=${body}`;
+      const button = form.querySelector("button[type=submit]");
+      const error = form.querySelector("[data-form-error]");
+      error?.classList.remove("is-show");
+      if (button) {
+        button.disabled = true;
+        button.textContent = "Sending…";
+      }
+
+      try {
+        const response = await fetch("https://formsubmit.co/ajax/hello@jppferreira.com", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            name,
+            email,
+            topic,
+            message,
+            _subject: `ParkNav: ${topic}`,
+            _template: "table",
+            _captcha: "false",
+            _replyto: email,
+          }),
+        });
+        const payload = await response.json().catch(() => ({}));
+        if (!response.ok || String(payload.success) !== "true") {
+          throw new Error(payload.message || "send failed");
+        }
+
+        form.classList.add("is-sent");
+        form.querySelector("[data-form-success]")?.classList.add("is-show");
+      } catch {
+        if (error) {
+          error.textContent = "We couldn’t send that. Check your connection and try again.";
+          error.classList.add("is-show");
+        }
+        if (button) {
+          button.disabled = false;
+          button.textContent = "Send message";
+        }
+      }
     });
   }
 

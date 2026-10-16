@@ -24,7 +24,7 @@ App Store / Play require public HTTPS URLs for Privacy and Terms. After publish,
 3. Upload everything in `images/` to Assets.
 4. Recreate **Navbar** and **Footer** as Symbols. Bind links to the pages above.
 5. Home: full-bleed `hero-street.jpg` background, brand word, one headline, one sentence, two buttons. No floating badges on the image.
-6. Contact: native Webflow Form (Name, Email, Topic, Message) → email `support@parknav.app`. Remove the static form script.
+6. Contact: native Webflow Form (Name, Email, Topic, Message). Do not print a support address on the page. Remove the static form script.
 7. Legal pages: either static pages or a CMS Collection (`title`, `updated`, `body` rich text) with a template.
 
 ## Hosting
