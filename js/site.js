@@ -58,7 +58,7 @@
       }
 
       try {
-        const response = await fetch("https://formsubmit.co/ajax/hello@jppferreira.com", {
+        const response = await fetch("https://formsubmit.co/ajax/contactparknav@gmail.com", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
