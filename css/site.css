@@ -721,11 +721,58 @@ p {
   gap: 1rem;
 }
 
+.form-fields {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-fields .btn {
+  justify-self: start;
+  margin-top: 0.15rem;
+}
+
+.field {
+  position: relative;
+  background: var(--elevated);
+  border-radius: 16px;
+  min-height: 56px;
+}
+
+.field:has(textarea) {
+  min-height: 120px;
+}
+
 .field label {
-  display: block;
-  font-weight: 700;
-  font-size: 0.85rem;
-  margin-bottom: 0.4rem;
+  position: absolute;
+  left: 16px;
+  top: 18px;
+  z-index: 1;
+  margin: 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #4e615b;
+  pointer-events: none;
+  transition:
+    top 160ms linear,
+    font-size 160ms linear,
+    line-height 160ms linear,
+    color 160ms linear;
+}
+
+.field:has(textarea) label {
+  top: 16px;
+}
+
+.field:focus-within label,
+.field.is-raised label,
+.field:has(select) label,
+.field:has(input:not(:placeholder-shown)) label,
+.field:has(textarea:not(:placeholder-shown)) label {
+  top: 8px;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--green-deep);
 }
 
 .field input,
@@ -733,15 +780,37 @@ p {
 .field select {
   width: 100%;
   border: 0;
-  background: var(--elevated);
-  border-radius: var(--radius-s);
-  padding: 0.9rem 1rem;
-  box-shadow: inset 0 0 0 1.5px var(--soft);
+  background: transparent;
+  border-radius: 16px;
+  padding: 24px 16px 8px;
+  min-height: 56px;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--ink);
+  box-shadow: none;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: transparent;
 }
 
 .field textarea {
-  min-height: 9rem;
+  min-height: 120px;
+  padding-top: 32px;
   resize: vertical;
+}
+
+.field select {
+  padding-right: 2.25rem;
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--green-deep) 50%),
+    linear-gradient(135deg, var(--green-deep) 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) 26px,
+    calc(100% - 12px) 26px;
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
 }
 
 .form-note {
@@ -768,6 +837,10 @@ p {
   display: block;
 }
 
+.form-error.is-mail {
+  color: var(--ink);
+}
+
 .btn:disabled {
   opacity: 0.65;
   cursor: wait;
@@ -782,8 +855,98 @@ p {
   display: block;
 }
 
-.form.is-sent .form-fields {
+.contact-modal .form.is-sent .form-fields {
   display: none;
+}
+
+.contact-modal[hidden] {
+  display: none;
+}
+
+.contact-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+}
+
+.contact-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(18, 32, 28, 0.55);
+}
+
+.contact-modal-panel {
+  position: relative;
+  width: min(34rem, 100%);
+  max-height: min(92vh, 48rem);
+  overflow: auto;
+  background: var(--elevated);
+  color: var(--ink);
+  border-radius: var(--radius-l);
+  padding: 1.75rem 1.75rem 1.5rem;
+  box-shadow: 0 24px 80px rgba(18, 32, 28, 0.28);
+}
+
+.contact-modal-panel h2 {
+  font-size: clamp(1.7rem, 3.2vw, 2.15rem);
+  line-height: 1.15;
+  margin: 0 2.75rem 0.65rem 0;
+}
+
+.contact-modal-panel .lede {
+  margin: 0 0 1.35rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.contact-modal .form-fields {
+  gap: 1.05rem;
+}
+
+.contact-modal .field {
+  background: var(--bg);
+}
+
+.contact-modal .form-fields .btn {
+  margin-top: 0.35rem;
+  justify-self: start;
+}
+
+.contact-modal-close {
+  position: absolute;
+  top: 1.15rem;
+  right: 1.15rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--soft);
+  color: var(--ink);
+  font: inherit;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+@media (max-width: 640px) {
+  .contact-modal {
+    padding: 0.75rem;
+  }
+
+  .contact-modal-panel {
+    padding: 1.35rem 1.15rem 1.15rem;
+  }
+
+  .contact-modal-panel h2 {
+    margin-right: 2.4rem;
+  }
+}
+
+body.modal-open {
+  overflow: hidden;
 }
 
 .contact-visual {
