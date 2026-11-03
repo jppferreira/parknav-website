@@ -66,6 +66,7 @@ const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
             <input id="modal-company" name="_honey" type="text" tabindex="-1" autocomplete="off">
           </div>
           <button class="btn" type="submit">Send message</button>
+          <p class="form-note">We use your message only to respond to your enquiry. It is relayed by email and is not stored long-term on ParkNav servers. See the <a href="privacy.html">Privacy Policy</a>.</p>
           <p class="form-error" data-form-error role="alert"></p>
         </div>
         <div class="form-success" data-form-success>
