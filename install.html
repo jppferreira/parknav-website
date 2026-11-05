@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Install ParkNav — Wi-Fi download</title>
-  <meta name="description" content="Download the ParkNav Android APK over your local Wi-Fi, or see how to install on iPhone.">
+  <title>ParkNav on Google Play</title>
+  <meta name="description" content="ParkNav is available as a beta on Google Play.">
   <link rel="icon" href="images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +28,7 @@
         <a class="nav-link" href="pricing.html">Pricing</a>
         <a class="nav-link" href="about.html">About</a>
         <a class="nav-link" href="contact.html">Contact</a>
-        <a class="btn btn-small" href="install.html">Install</a>
+        <a class="btn btn-small" href="index.html#download">Get the app</a>
       </nav>
     </div>
   </header>
@@ -36,69 +36,18 @@
   <main id="content">
     <header class="page-intro">
       <div class="page-intro-inner">
-        <p class="kicker">Install</p>
-        <h1 class="display">Get ParkNav on this Wi-Fi.</h1>
-        <p class="lede">Android can install the APK from this page. iPhone cannot sideload an unsigned app over Wi-Fi — the route for that is below.</p>
+        <p class="kicker">Android beta</p>
+        <h1 class="display">Available as a beta on Google Play.</h1>
+        <p class="lede">Install ParkNav from the Google Play beta.</p>
+        <a class="store-badge" href="https://play.google.com/store/apps/details?id=com.parknav.app">
+          <img src="images/google-play-badge.png" width="646" height="250" alt="Get it on Google Play">
+        </a>
+        <div class="cta-row">
+          <a class="btn" href="index.html">Back to ParkNav</a>
+          <a class="btn btn-ghost" href="contact.html">Contact</a>
+        </div>
       </div>
     </header>
-
-    <section class="section-tight">
-      <div class="wrap-wide contact-grid">
-        <div>
-          <p class="kicker">Android</p>
-          <h2 class="display">Download the APK</h2>
-          <p class="lede">Same Wi-Fi as this computer. Open this page on your phone, tap download, then allow install from the browser.</p>
-          <div class="cta-row">
-            <a class="btn" id="apk-link" href="downloads/parknav.apk" download="ParkNav.apk">Download ParkNav.apk</a>
-          </div>
-          <p class="form-note" id="apk-url" style="margin-top: 1rem;"></p>
-          <div class="steps" style="margin-top: 2rem; gap: 1.4rem;">
-            <div>
-              <p class="step-num">01</p>
-              <h3>Tap download</h3>
-              <p class="muted">Chrome or Samsung Internet will save the file. If Android warns that the file is from an unknown source, that’s expected for a direct APK.</p>
-            </div>
-            <div>
-              <p class="step-num">02</p>
-              <h3>Allow this browser to install</h3>
-              <p class="muted">Settings → allow from this source, then Open. ParkNav is signed for testing, not Play Store.</p>
-            </div>
-            <div>
-              <p class="step-num">03</p>
-              <h3>Open ParkNav</h3>
-              <p class="muted">The app is standalone — you don’t need Expo Go on Android.</p>
-            </div>
-          </div>
-        </div>
-        <div>
-          <p class="kicker">Scan</p>
-          <h2 class="display" style="font-size: 1.8rem; margin-bottom: 1rem;">Phone on the same network</h2>
-          <img id="qr" alt="QR code for this install page" width="220" height="220" style="background: var(--elevated); border-radius: 18px; padding: 12px;">
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="ios">
-      <div class="wrap">
-        <p class="kicker">iPhone</p>
-        <h2 class="display">Wi-Fi install isn’t available the same way</h2>
-        <p class="lede" style="margin-top: 1rem;">Apple only lets you install apps that are signed with an Apple Developer certificate (TestFlight, App Store, or a USB install from Xcode). An IPA dropped on this Wi-Fi page would not open on a normal iPhone.</p>
-        <div class="faq" style="margin-top: 2rem;">
-          <div>
-            <h3>What we can do on iOS</h3>
-            <p>Install Xcode from the Mac App Store, plug the iPhone in, trust the computer, then run a device build. That installs a real ParkNav app for about 7 days with a free Apple ID, or longer with a paid Developer account.</p>
-          </div>
-          <div>
-            <h3>Test over Wi-Fi today</h3>
-            <p>Install Expo Go from the App Store, then scan the QR code from <code>npx expo start</code> on this Mac. That’s the JS app, not a standalone ParkNav icon.</p>
-          </div>
-          <div>
-            <h3>Later: TestFlight</h3>
-            <p>With the Apple Developer Program (£99/year), EAS can build an IPA and you install through TestFlight over Wi-Fi — that’s the proper iOS equivalent of this APK link.</p>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="footer">
@@ -112,7 +61,7 @@
         <ul>
           <li><a href="features.html">Features</a></li>
           <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="install.html">Install</a></li>
+          <li><a href="index.html#download">Get the app</a></li>
         </ul>
       </div>
       <div>
@@ -120,7 +69,6 @@
         <ul>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="mailto:support@parknav.app" data-open-contact>support@parknav.app</a></li>
         </ul>
       </div>
       <div>
@@ -139,17 +87,5 @@
   </footer>
 
   <script src="js/site.js"></script>
-  <script>
-    (function () {
-      var page = window.location.href.split("#")[0];
-      var apk = new URL("downloads/parknav.apk", page).href;
-      var qr = document.getElementById("qr");
-      var note = document.getElementById("apk-url");
-      if (qr) {
-        qr.src = "https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=" + encodeURIComponent(page);
-      }
-      if (note) note.textContent = apk;
-    })();
-  </script>
 </body>
 </html>

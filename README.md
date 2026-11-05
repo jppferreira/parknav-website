@@ -18,7 +18,7 @@ Static marketing website for **ParkNav** — separate from the mobile app repo.
 | `/privacy.html` | Privacy Policy |
 | `/terms.html` | Terms of Use |
 | `/data.html` | Data & open sources |
-| `/install.html` | Wi-Fi APK install (optional) |
+| `/install.html` | Google Play beta. |
 
 ## Local preview
 
